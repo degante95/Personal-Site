@@ -1,0 +1,55 @@
+<div class="white-text center">
+    <h1 class="title">
+        <i class="fa fa-pencil"></i>Contact
+    </h1>
+    <!-- <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close"
+    class="x" aria-hidden="true" routerLink="/home">
+    </button> -->
+</div>
+<div class="card mb-5 main elegant-color">
+    <div class="md-form">
+        <form [formGroup]="contactForm">
+
+
+            <p id="email">Email: degantecarlos@gmail.com</p>
+            <!-- <p id="phone"></p> -->
+
+            <div class="md-form">
+                <i class="fa fa-user prefix grey-text"></i>
+                <input type="text" id="contactFormName" formControlName="contactFormName" class="form-control"
+                    mdbInputDirective [(ngModel)]="itemName">
+                <label for="contactFormName">Your name</label>
+            </div>
+
+            <div class="md-form">
+                <i class="fa fa-envelope prefix grey-text"></i>
+                <input type="email" id="contactFormEmail" formControlName="contactFormEmail" class="form-control"
+                    mdbInputDirective [(ngModel)]="itemEmail">
+                <label for="contactFormEmail">Your email</label>
+            </div>
+
+            <div class="md-form">
+                <i class="fa fa-tag prefix grey-text"></i>
+                <input type="text" id="contactFormSubject" formControlName="contactFormSubject" class="form-control"
+                    mdbInputDirective [(ngModel)]="itemSubject">
+                <label for="contactFormSubject">Subject</label>
+            </div>
+
+            <div class="md-form">
+                <i class="fa fa-pencil prefix grey-text"></i>
+                <textarea type="text" id="contactFormMessage" formControlName="contactFormMessage" class="md-textarea"
+                    style="height: 100px" mdbInputDirective [(ngModel)]="itemMessage">
+    </textarea>
+                <label for="contactFormMessage">Your message</label>
+            </div>
+
+            <div class="text-center">
+                <button [disabled]="contactForm.invalid" (click)="onSubmit()" (click)="clearForm()" type="submit"
+                    class="btn waves-light" mdbWavesEffect>Send
+                    <i class="fa fa-paper-plane-o ml-1"></i>
+                </button>
+                <br>
+            </div>
+</form>
+</div>
+</div>
